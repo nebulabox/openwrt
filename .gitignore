@@ -28,8 +28,6 @@ TAGS*~
 git-src
 .project
 .cproject
-
-
 .config.*
-
 build.log
+.ccache

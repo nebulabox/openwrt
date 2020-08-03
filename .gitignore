@@ -32,3 +32,4 @@ git-src
 
 .config.*
 
+build.log

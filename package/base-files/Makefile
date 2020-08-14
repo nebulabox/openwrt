@@ -105,7 +105,7 @@ ifdef CONFIG_SIGNED_PACKAGES
 		$(STAGING_DIR_HOST)/bin/usign -G -s $(BUILD_KEY) -p $(BUILD_KEY).pub -c "Local build key"
 
 	[ -s $(BUILD_KEY).ucert ] || \
-		$(STAGING_DIR_HOST)/bin/ucert -I -c $(BUILD_KEY).ucert -p $(BUILD_KEY).pub -s $(BUILD_KEY)
+		DYLD_LIBRARY_PATH="$(STAGING_DIR_HOST)/lib" $(STAGING_DIR_HOST)/bin/ucert -I -c $(BUILD_KEY).ucert -p $(BUILD_KEY).pub -s $(BUILD_KEY)
 
   endef
 
